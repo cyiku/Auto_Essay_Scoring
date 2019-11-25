@@ -18,7 +18,19 @@ def spell_error(data):
 
 def count_tree_depth(root):
     def travel(root, length, res):
-        if type(root) == 
+        if type(root) == str:
+            res.append(length)
+            return
+        l = len(root)
+        for i in range(l):
+            if root[i]:
+                travel(root[i],length+1,res)
+    if root is None:
+        return []
+    l=[]
+    travel(root,1,l)
+    
+
 
 
 def Mean_sentence_depth(data):
